@@ -5,3 +5,35 @@
     display: flex;
     align-items: center;
 }
+.title{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: white;
+}
+.navbar-contents{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 8rem;
+    font-size: 20px;
+    transition: 0.5s;
+    color: white;
+}
+.home,.map,.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+.home:hover,.map:hover,.contact:hover{
+    width: 15%;
+    padding: 20px;
+    background-color: #31E1F7;
+    border-radius: 20px;
+}
