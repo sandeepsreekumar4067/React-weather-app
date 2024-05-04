@@ -1,6 +1,17 @@
 import '../Style/interface.css'
 import { FaSearch } from "react-icons/fa";
+import weatherIcon from '../assets/pngwing.com.png'
+import React, { useState, useEffect } from 'react';
+
 const Interface = () => {
+    const [date,setdate] = useState(new Date())
+    useEffect(()=>{
+        const timer = setInterval(() => {
+            setdate(new Date())
+
+    }, 1000);
+    return clearInterval(timer)
+},[])
     return ( 
         <div className="interface">
             <div className="title-components">
@@ -22,7 +33,15 @@ const Interface = () => {
                 <br />
                 bestway to know your weather
             </div>
-            <div className="weather-components"></div>
+            <div className="weather-components">
+                <div className="weather-title">
+                    <img src={weatherIcon} alt="" />
+                    <div className="time-and-details">
+                        Total Weather Details
+                        <p>{date.toLocaleTimeString()}</p>
+                    </div>
+                </div>
+            </div>
         </div>
      );
 }

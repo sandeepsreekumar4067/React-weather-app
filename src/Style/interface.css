@@ -54,3 +54,30 @@
 .input-box input::placeholder{
     font-size: 20px;    
 }
+.weather-components{
+    width: 50%;
+    height: 100%;
+    background-color: #11009E;
+    border-radius: 10px;
+}
+.weather-title{
+    width: 100%;
+    height: 90px;
+    background-color: #4942E4;
+    display: flex;
+    border-top-left-radius: 10px;
+}
+.weather-title img{
+    padding: 10px;   
+}
+.time-and-details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    font-size: 26px;
+}
+.time-and-details p{
+    font-size: 15px;
+}
