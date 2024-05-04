@@ -11,6 +11,16 @@
     width: 50%;
     color: white;
 }
+.subtitles{
+    width: 60%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+}
 .input-box{
     display: flex;
     background-color: white;
@@ -19,11 +29,28 @@
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    opacity: 0.4;
+    opacity: 0.6;
+}
+.spacer{
+    width: 1%;
 }
 .input-box input{
     width: 50%;
     height: 85%;
     border: none;
     outline: none;
+    font-size: 20px;
+}
+.search-button{
+    width: 40%;
+    height: 100%;
+    background-color: #31E1F7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+.input-box input::placeholder{
+    font-size: 20px;    
 }
