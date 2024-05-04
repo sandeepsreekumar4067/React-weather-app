@@ -1,10 +1,29 @@
-body{
+.interface{
+    height: 500px;
+    width: 100%;
+    display: flex;
+}
+.title-components{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(50deg,#0C134F,#11009E,#7752FE,#4942E4,#4942E4);
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background-image: url('../assets/pattern.svg') ;
+    justify-content: center;
+    width: 50%;
+    color: white;
+}
+.input-box{
+    display: flex;
+    background-color: white;
+    width: 450px;
+    height: 45px;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+}
+.input-box input{
+    width: 50%;
+    height: 85%;
+    border: none;
+    outline: none;
 }
