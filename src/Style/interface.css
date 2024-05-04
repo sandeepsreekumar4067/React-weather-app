@@ -1,0 +1,10 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(50deg,#0C134F,#11009E,#7752FE,#4942E4,#4942E4);
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../assets/pattern.svg') ;
+}
