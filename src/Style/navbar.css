@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 .navbar-body{
-    background-color:transparent;
+    background-color: transparent;
     height: 150px;
     width: 100vmax;
     display: flex;
@@ -10,8 +11,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 38px;
+    font-size: 48px;
     color: white;
+    letter-spacing: 10px;
+    font-family: "Karla", sans-serif;
+
 }
 .navbar-contents{
     width: 50%;
@@ -25,15 +29,16 @@
     color: white;
 }
 .home,.map,.contact{
+    position: relative;
+    height: 40px;
+    width: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.4s;
+    transition: 0.3s;
+}
+.home:hover,.map:hover,.contact:hover{
+    box-shadow: 3px 8px 10px black;
+    scale: 1.1;
 }
 
-.home:hover,.map:hover,.contact:hover{
-    width: 15%;
-    padding: 20px;
-    background-color: #31E1F7;
-    border-radius: 20px;
-}

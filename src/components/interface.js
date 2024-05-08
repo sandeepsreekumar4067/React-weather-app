@@ -2,13 +2,13 @@ import '../Style/interface.css'
 import { FaSearch } from "react-icons/fa";
 import weatherIcon from '../assets/pngwing.com.png'
 import React, { useState, useEffect } from 'react';
+import WeatherDetails from './weatherDetails';
 
 const Interface = () => {
     const [date,setdate] = useState(new Date())
     useEffect(()=>{
         const timer = setInterval(() => {
             setdate(new Date())
-
     }, 1000);
     return clearInterval(timer)
 },[])
@@ -41,6 +41,7 @@ const Interface = () => {
                         <p>{date.toLocaleTimeString()}</p>
                     </div>
                 </div>
+                <WeatherDetails/>
             </div>
         </div>
      );
