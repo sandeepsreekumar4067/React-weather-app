@@ -1,23 +1,116 @@
-.weather-details{
+.weather-details {
     width: 770px;
     height: 410px;
-   background: transparent;
-   display: flex;
-   align-items: center;
-   color: white;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    color: white;
 }
-.container1{
+
+.container1 {
     width: 265px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+}
+
+.detail1 {
+    
+    margin: 5px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    background: rgb(255, 255, 255, 0.25);
+    border-radius: 8px;
+}
+.Weathertitle{
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: "Karla", sans-serif;
+}
+.temperature{
+    display: flex;
+    align-items: end;
+}
+.degree{
+    padding: 10px;
+    font-size: 75px;
+    display: flex;
+}
+.degreetitle{
+    font-size: 18px;
+    opacity: 0.7;
+    letter-spacing: 1px;
+}
+.detail2 {
+    margin: 5px;
+    height: 50%;
+    width: 95%;
+    background: rgb(255, 255, 255, 0.25);
+    border-radius: 8px;
+}
+.detail2-container1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    opacity: 0.7;
+    font-family: "Karla", sans-serif;
+    letter-spacing: 1px;
+}
+.detail2-container2{
+    height: 60%;
+    width: 100%;
+    display: flex;
+}
+.earth{
+    height: 100%;
+    width: 100%;
     
 }
-.detail1{
-    margin: 10px;
-    height: 50%;
-    width:95%;
-    background-color: red;
-    border-radius: 8px;
+.day-and-date{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.day{
+    font-size: 20px;
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+.weather-type{
+    font-size: 15px;
+    letter-spacing: 8px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+.detail2-container3{
+    display: flex;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.wind{
+    font-size: 18px;
+    opacity: 0.7;
+    font-family: "Karla", sans-serif;
+
+}
+.humidity{
+    font-size: 15px;
+    opacity: 0.7;
+    font-family: "Karla", sans-serif;
+
 }
