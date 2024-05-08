@@ -50,6 +50,11 @@
     justify-content: center;
     color: white;
     font-size: 20px;
+    transition: 0.3s ease-in-out;
+}
+.search-button:active{
+    box-shadow: 10px 10px black;
+    scale: 1.1;
 }
 .input-box input::placeholder{
     font-size: 20px;    

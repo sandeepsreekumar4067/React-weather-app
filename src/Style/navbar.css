@@ -38,7 +38,7 @@
     transition: 0.3s;
 }
 .home:hover,.map:hover,.contact:hover{
-    box-shadow: 3px 8px 10px black;
+    box-shadow: 5px 5px 10px black;
     scale: 1.1;
 }
 
