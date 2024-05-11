@@ -1,0 +1,15 @@
+.SearchComponent{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid grey;
+    color: black;
+    text-align: center;
+    /* margin-top: 5px; */
+    transition: 0.2s;
+}
+.SearchComponent:active{
+    background-color: grey;
+}
