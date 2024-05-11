@@ -6,12 +6,30 @@ import WeatherDetails from './weatherDetails';
 import SearchResultComponent from './searchResult';
 
 const Interface = () => {
-    const results = ["helo","hi","hey","how","hi","hmmm","ooh","huh"]
+    const [results,setResults] = useState('')
     const [date,setdate] = useState(new Date())
     const [place,setPlace] = useState('')
-    const [latitudes,setLatitudes] = useState('')
-    const [longitudes,setLongitudes] = useState('')
     const [resVisibility,setResVisibility] = useState(false)
+    const handleComponentClick=(lat,lon)=>{
+        console.log("clicked");
+        console.log(lat,lon);
+        if(lat!=='' && lon!==''){
+            console.log("inside weather");
+            fetch("https://api.tomorrow.io/v4/weather/forecast?location="+lat+","+lon+"&apikey=3o2SlJvNcR2Ud7bhBe4UGQ6Oypghv4PS")
+            .then((response)=>{
+                if(response.ok){
+                    return response.json()
+                }else{
+                    throw new Error("Unexpected Value")
+                }
+            }).then((data)=>{
+                console.log(data);
+            }).catch((e)=>{
+                console.log(e);
+            })
+        }
+        setResVisibility(false)
+    }
     const API = 'd2e73c37f81a413faab72660135d4ce8'
     const handleChange = (e)=>{
         setPlace(e.target.value)
@@ -35,30 +53,28 @@ const searchClick = () =>{
             throw new Error("Unexpected Value")
            }
         })
+        // results[0].city
+        // results[0].state
+        // results[0].lat
+        // results[0].lon
         .then((data)=>{
-            setLatitudes(data.results[0].lat);
-            setLongitudes(data.results[0].lon)
+            const newResults = data.results.map(result => ({
+                placename: result.city,
+                state: result.state,
+                lat: result.lat,
+                long: result.lon
+            })); 
+            // Update the results state
+            setResults(newResults)
+            setResVisibility(true)
+            console.log(results);
+            console.log("printing fetched data");
+            console.log(data);
         }).catch((e)=>{
             console.log(e);
         })
     }
     console.log("fnished coordinate");
-    if(latitudes!=='' && longitudes!==''){
-        console.log("inside weather");
-        fetch("https://api.tomorrow.io/v4/weather/forecast?location="+latitudes+","+longitudes+"&apikey=3o2SlJvNcR2Ud7bhBe4UGQ6Oypghv4PS")
-        .then((response)=>{
-            if(response.ok){
-                return response.json()
-            }else{
-                throw new Error("Unexpected Value")
-            }
-        }).then((data)=>{
-            console.log(data);
-            setResVisibility(true)
-        }).catch((e)=>{
-            console.log(e);
-        })
-    }
 
 }
     return ( 
@@ -82,7 +98,7 @@ const searchClick = () =>{
                 <br />
                <div className="select-area">
                 <div className={`search-results${resVisibility?' visible':''}`}>
-                    <SearchResultComponent results={results} />
+                   {results &&  <SearchResultComponent results={results} onClick={handleComponentClick} />}
                 </div>
                bestway to know your weather
                </div>
