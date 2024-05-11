@@ -42,3 +42,6 @@
     scale: 1.1;
 }
 
+.home:active,.map:active,.contact:active{
+    scale: 0.9;
+}

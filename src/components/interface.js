@@ -3,15 +3,19 @@ import { FaSearch } from "react-icons/fa";
 import weatherIcon from '../assets/pngwing.com.png'
 import React, { useState, useEffect } from 'react';
 import WeatherDetails from './weatherDetails';
+import SearchResultComponent from './searchResult';
 
 const Interface = () => {
+    const results = ["helo","hi","hey","how","hi","hmmm","ooh","huh"]
     const [date,setdate] = useState(new Date())
     const [place,setPlace] = useState('')
     const [latitudes,setLatitudes] = useState('')
     const [longitudes,setLongitudes] = useState('')
+    const [resVisibility,setResVisibility] = useState(false)
     const API = 'd2e73c37f81a413faab72660135d4ce8'
     const handleChange = (e)=>{
         setPlace(e.target.value)
+        setResVisibility(false)
     }
     useEffect(()=>{
         const timer = setInterval(() => {
@@ -50,6 +54,7 @@ const searchClick = () =>{
             }
         }).then((data)=>{
             console.log(data);
+            setResVisibility(true)
         }).catch((e)=>{
             console.log(e);
         })
@@ -75,7 +80,12 @@ const searchClick = () =>{
                     </div>
                 </div>
                 <br />
-                bestway to know your weather
+               <div className="select-area">
+                <div className={`search-results${resVisibility?' visible':''}`}>
+                    <SearchResultComponent results={results} />
+                </div>
+               bestway to know your weather
+               </div>
             </div>
             <div className="weather-components">
                 <div className="weather-title">
@@ -85,7 +95,7 @@ const searchClick = () =>{
                         <p>{date.toLocaleTimeString()}</p>
                     </div>
                 </div>
-                <WeatherDetails/>
+                <WeatherDetails />
             </div>
         </div>
      );

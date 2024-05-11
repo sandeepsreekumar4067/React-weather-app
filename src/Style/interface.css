@@ -86,3 +86,36 @@
 .time-and-details p{
     font-size: 15px;
 }
+.select-area{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.search-results{
+    position: absolute;
+    height: 100px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    transform: translate(-250px,18px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    visibility: hidden;
+}
+.search-results.visible{
+    visibility: visible;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.search-results::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .search-results {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
